@@ -1,0 +1,13 @@
+{
+  "name": "claude-project-bootstrap",
+  "owner": {
+    "name": "twisker"
+  },
+  "plugins": [
+    {
+      "name": "project-bootstrap",
+      "source": ".",
+      "description": "Bootstrap any new project with a production-grade AI-Human collaboration framework."
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "name": "project-bootstrap",
+  "description": "Bootstrap any new project with a production-grade AI-Human collaboration framework. Generates README.md, CLAUDE.md, .claude/ registry files, git version hooks, and sprint planning templates through interactive dialogue.",
+  "version": "1.0.0",
+  "author": {
+    "name": "twisker",
+    "url": "https://github.com/twisker"
+  },
+  "repository": "https://github.com/twisker/claude-project-bootstrap",
+  "license": "MIT",
+  "keywords": [
+    "project-setup",
+    "scaffolding",
+    "collaboration",
+    "sprint-planning",
+    "version-management"
+  ]
+}
