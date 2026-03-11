@@ -6,7 +6,7 @@
   "plugins": [
     {
       "name": "project-bootstrap",
-      "source": "skills/project-bootstrap",
+      "source": "./skills/project-bootstrap",
       "description": "Bootstrap any new project with a production-grade AI-Human collaboration framework."
     }
   ]
