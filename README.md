@@ -34,6 +34,8 @@ Through 3~5 rounds of interactive dialogue, this skill understands your project 
 
 ## Installation
 
+> **Important:** After installing a new plugin, you must **exit your current Claude Code session and start a new one** for the plugin to take effect. Plugins are loaded at session startup, so a newly installed plugin will not be available until you restart.
+
 ### Option 1: Plugin install (recommended)
 
 ```bash
@@ -42,6 +44,8 @@ Through 3~5 rounds of interactive dialogue, this skill understands your project 
 
 # Install the plugin
 /plugin install project-bootstrap
+
+# ⚠️ Exit and restart Claude Code for the plugin to load
 ```
 
 ### Option 2: Add marketplace to settings
@@ -65,6 +69,7 @@ Then install:
 
 ```
 /plugin install project-bootstrap
+# ⚠️ Exit and restart Claude Code for the plugin to load
 ```
 
 ### Option 3: Local install (for development/testing)
@@ -80,7 +85,7 @@ claude --plugin-dir /path/to/claude-project-bootstrap
 ```bash
 # Copy into your project's .claude/skills/ directory
 mkdir -p .claude/skills/project-bootstrap
-cp -r skills/project-bootstrap/* .claude/skills/project-bootstrap/
+cp -r plugins/project-bootstrap/skills/project-bootstrap/* .claude/skills/project-bootstrap/
 ```
 
 ## Usage
@@ -110,24 +115,29 @@ Claude will then guide you through an interactive dialogue to gather requirement
 ```
 claude-project-bootstrap/
 ├── .claude-plugin/
-│   ├── plugin.json              # Plugin manifest
-│   └── marketplace.json         # Marketplace catalog
-├── skills/
+│   ├── plugin.json              # Repo-level plugin manifest
+│   └── marketplace.json         # Marketplace catalog (points to plugins/)
+├── plugins/
 │   └── project-bootstrap/
-│       ├── SKILL.md             # Main skill definition
-│       └── references/          # Template files for generation
-│           ├── collaboration-template.md
-│           ├── tech-spec-template.md
-│           ├── arch-spec-template.md
-│           ├── sprint-plan-template.md
-│           ├── current-sprint-template.md
-│           ├── module-spec-template.md
-│           ├── test-registry-template.md
-│           ├── validation-template.md
-│           ├── human-todo-template.md
-│           ├── claude-md-template.md
-│           └── scripts-template.md
+│       ├── .claude-plugin/
+│       │   └── plugin.json      # Plugin identity
+│       └── skills/
+│           └── project-bootstrap/
+│               ├── SKILL.md             # Main skill definition
+│               └── references/          # Template files for generation
+│                   ├── collaboration-template.md
+│                   ├── tech-spec-template.md
+│                   ├── arch-spec-template.md
+│                   ├── sprint-plan-template.md
+│                   ├── current-sprint-template.md
+│                   ├── module-spec-template.md
+│                   ├── test-registry-template.md
+│                   ├── validation-template.md
+│                   ├── human-todo-template.md
+│                   ├── claude-md-template.md
+│                   └── scripts-template.md
 ├── README.md
+├── README.zh-CN.md
 └── LICENSE
 ```
 
